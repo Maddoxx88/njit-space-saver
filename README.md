@@ -1,0 +1,1 @@
+NJIT SpaceSaver is a parking reservation application designed to simplify your parking experience. Whether you're a student, faculty member, or visitor at the New Jersey Institute of Technology (NJIT), our app ensures you'll never have to stress about finding a parking spot again.
