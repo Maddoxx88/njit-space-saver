@@ -122,7 +122,10 @@ export default function Home() {
         </button>
       </div>
       <div className="flex justify-center mt-8">
-      {showQR && <QRCode value={currSpot} size={150}/> }
+      {showQR && <QRCode value={`${currSpot} (NJIT Parking Deck)`} size={150}/> }
+      </div>
+      <div className="flex justify-center mt-8">
+      {showQR && <div>Parking reserved at {currSpot}</div> }
       </div>
     </main>
   );
