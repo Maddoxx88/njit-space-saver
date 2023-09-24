@@ -15,6 +15,40 @@ import { db } from "../firebaseConfig";
 
 export default function Home() {
   const [totalLevels, setTotalLevels] = useState([1, 2, 3, 4, 5, 6, 7, 8]);
+  const [levelData, setLevelData] = useState([
+    {
+      "total": 200,
+      "available": 183
+    },
+    {
+      "total": 150,
+      "available": 112
+    },
+    {
+      "total": 125,
+      "available": 87
+    },
+    {
+      "total": 230,
+      "available": 142
+    },
+    {
+      "total": 154,
+      "available": 90
+    },
+    {
+      "total": 184,
+      "available": 78
+    },
+    {
+      "total": 100,
+      "available": 46
+    },
+    {
+      "total": 164,
+      "available": 39
+    },
+  ])
   const [totalSpots, setTotalSpots] = useState(0);
   const [availableSpots, setAvailableSpots] = useState(0);
   const [availableSpotIndexes, setAvailableSpotIndexes] = useState([]);
@@ -69,12 +103,12 @@ export default function Home() {
         Reserve your parking spot here
       </div>
       <div className="grid grid-cols-4 gap-8 my-8 px-8">
-        {totalLevels.map((data) => {
+        {levelData.map((data, idx) => {
           return (
             <div className="p-4 bg-white drop-shadow-lg rounded-md">
-              <h2>Level {data}</h2>
-              <p>Total spots 200</p>
-              <p>Available spots 103</p>
+              <h2>Level {idx + 1}</h2>
+              <p>Total spots {data.total}</p>
+              <p>Available spots {data.available}</p>
             </div>
           );
         })}
