@@ -55,13 +55,14 @@ export default function Home() {
             <div className="flex flex-wrap justify-between">
               {parkingSpots &&
                 parkingSpots!.map((data: any, idx: any) => {
-                  console.log(data.occupied);
+                  console.log(`${data.spot}: ${data.disabled}`);
                   return (
                     <ParkingSpot
                       index={data}
                       key={idx}
                       occupied={data.occupied}
                       spot={data.spot}
+                      disabledP={data.disabled}
                     />
                   );
                 })}
